@@ -62,5 +62,17 @@ namespace PodsystemaFizLicz.View
             }
             lvCitizen.ItemsSource = citizens;
         }
+
+        private void btnAdd_Click(object sender, RoutedEventArgs e)
+        {
+        }
+
+        private void btnEdit_Click(object sender, RoutedEventArgs e)
+        {
+        }
+
+        private void btnDelete_Click(object sender, RoutedEventArgs e)
+        {
+        }
     }
 }

@@ -51,5 +51,17 @@ namespace PodsystemaFizLicz.ViewModel
                     Data = new DateTime(2021, 11, 22)
                 });
         }
+        public int MaxId()
+        {
+            int max = 0;
+            foreach (var item in Documents)
+            {
+                if (max < item.Id)
+                {
+                    max = item.Id;
+                };
+            }
+            return max;
+        }
     }
 }

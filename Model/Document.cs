@@ -24,5 +24,9 @@ namespace PodsystemaFizLicz.Model
             Organ = organ;
             Data = data;
         }
+        public Document ShallowCopy()
+        {
+            return (Document)this.MemberwiseClone();
+        }
     }
 }

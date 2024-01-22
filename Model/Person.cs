@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -36,6 +37,11 @@ namespace PodsystemaFizLicz.Model
             Inn = inn;
             Type = type;
             Data = data;
+        }
+
+        public Person ShallowCopy()
+        {
+            return (Person)this.MemberwiseClone();
         }
     }
 }

@@ -51,5 +51,18 @@ namespace PodsystemaFizLicz.ViewModel
                     Data = new DateTime(2005, 05, 10)
                 });
         }
+
+        public int MaxId()
+        {
+            int max = 0;
+            foreach (var item in Persons)
+            {
+                if (max < item.Id)
+                {
+                    max = item.Id;
+                };
+            }
+            return max;
+        }
     }
 }

@@ -17,6 +17,7 @@ namespace PodsystemaFizLicz
     /// </summary>
     public partial class MainWindow : Window
     {
+        public static int IdRole { get; set; }
         public MainWindow()
         {
             InitializeComponent();

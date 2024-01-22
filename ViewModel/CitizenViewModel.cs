@@ -59,5 +59,18 @@ namespace PodsystemaFizLicz.ViewModel
                     Number = "544798"
                 });
         }
+
+        public int MaxId()
+        {
+            int max = 0;
+            foreach (var item in Citizens)
+            {
+                if (max < item.Id)
+                {
+                    max = item.Id;
+                };
+            }
+            return max;
+        }
     }
 }
