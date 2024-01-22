@@ -17,7 +17,10 @@ namespace PodsystemaFizLicz
     /// </summary>
     public partial class MainWindow : Window
     {
-        public static int IdRole { get; set; }
+        public static int IdPerson { get; set; }
+        public static int IdDocument { get; set; }
+        public static int IdCitizen { get; set; }
+
         public MainWindow()
         {
             InitializeComponent();

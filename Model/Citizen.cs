@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PodsystemaFizLicz.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -29,6 +30,42 @@ namespace PodsystemaFizLicz.Model
             SecondName = secondName;
             LastName = lastName;
             Number = number;
+        }
+
+        public Citizen CopyFromCitizenDPO(CitizenDPO p)
+        {
+            PersonViewModel person = new PersonViewModel();
+            int personId = 0;
+            foreach (var r in person.Persons)
+            {
+                if (r.Inn == p.Person)
+                {
+                    personId = r.Id;
+                    break;
+                }
+            }
+
+            DocumentViewModel document = new DocumentViewModel();
+            int documentId = 0;
+            foreach (var r in document.Documents)
+            {
+                if (r.Name == p.Document)
+                {
+                    documentId = r.Id;
+                    break;
+                }
+            }
+
+            if (personId != 0 && documentId != 0)
+            {
+                this.Id = p.Id;
+                this.PersonID = personId;
+                this.DocumentID = documentId;
+                this.FirstName = p.FirstName;
+                this.LastName = p.LastName;
+                this.Number = p.Number;
+            }
+            return this;
         }
     }
 }

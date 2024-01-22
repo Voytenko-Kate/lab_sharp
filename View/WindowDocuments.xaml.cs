@@ -54,7 +54,7 @@ namespace PodsystemaFizLicz.View
         {
             WindowNewDocuments wnModel = new WindowNewDocuments
             {
-                Title = "Редактирование документ",
+                Title = "Редактирование документа",
                 Owner = this
             };
 
