@@ -6,4 +6,21 @@
         xmlns:local="clr-namespace:PodsystemaFizLicz.View"
         mc:Ignorable="d"
         Title="Физические лица" Height="450" Width="800">
+    <StackPanel Background="#FFD8D8D8">
+        <ListView x:Name="lvCitizen" Background="#FFD3CDCD">
+            <ListView.View>
+                <GridView>
+                    <GridView.Columns>
+                        <GridViewColumn Header="Код" Width="50" DisplayMemberBinding="{Binding Id}" />
+                        <GridViewColumn Header="Документ" Width="60" DisplayMemberBinding="{Binding Document}"/>
+                        <GridViewColumn Header="Имя клиента" Width="80" DisplayMemberBinding="{Binding FirstName}"/>
+                        <GridViewColumn Header="Фамилия клиента" Width="100" DisplayMemberBinding="{Binding LastName}" />
+                        <GridViewColumn Header="Отчество клиента" Width="105" DisplayMemberBinding="{Binding SecondName}"/>
+                        <GridViewColumn Header="ИНН клиента" Width="80" DisplayMemberBinding="{Binding Person}"/>
+                        <GridViewColumn Header="Номер паспорта" Width="100" DisplayMemberBinding="{Binding Number}"/>
+                    </GridView.Columns>
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </StackPanel>
 </Window>

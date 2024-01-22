@@ -6,5 +6,19 @@
         xmlns:local="clr-namespace:PodsystemaFizLicz.View"
         mc:Ignorable="d"
         Title="Документы" Height="450" Width="800">
-
+    <StackPanel Background="#FFD8D8D8">
+        <ListView x:Name="lvDocument" Background="#FFD3CDCD">
+            <ListView.View>
+                <GridView>
+                    <GridView.Columns>
+                        <GridViewColumn Header="Код" Width="50" DisplayMemberBinding="{Binding Id}" />
+                        <GridViewColumn Header="Наименование документа" Width="150"  DisplayMemberBinding="{Binding Name}"/>
+                        <GridViewColumn Header="Серия документа" Width="100"  DisplayMemberBinding="{Binding Seriy}"/>
+                        <GridViewColumn Header="Орган, выдавший документ" Width="160" DisplayMemberBinding="{Binding Organ}"/>
+                        <GridViewColumn Header="Дата выдачи документа" Width="150" DisplayMemberBinding="{Binding Data, StringFormat={}{0:dd\.}{0:MM\.}{0:yyyy}}"/>
+                    </GridView.Columns>
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </StackPanel>
 </Window>

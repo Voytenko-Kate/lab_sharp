@@ -24,6 +24,7 @@ namespace PodsystemaFizLicz.Model
         public string Shifer { get; set; }
         public string Inn { get; set; }
         public PersonType Type { get; set; }
+        public string TypeStr { get { return Type == PersonType.NaturalPerson ? "Физическое лицо" : "Юридическое лицо"; } }
         public DateTime Data { get; set; }
 
         public Person() { }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PodsystemaFizLicz.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,8 @@ namespace PodsystemaFizLicz.View
         public WindowPersons()
         {
             InitializeComponent();
+            PersonViewModel viewModel = new PersonViewModel();
+            lvPersons.ItemsSource = viewModel.Persons;
         }
     }
 }

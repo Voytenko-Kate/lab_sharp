@@ -6,5 +6,19 @@
         xmlns:local="clr-namespace:PodsystemaFizLicz.View"
         mc:Ignorable="d"
         Title="Владельцы документов" Height="450" Width="800">
-    
+    <StackPanel Background="#FFD8D8D8">
+        <ListView x:Name="lvPersons" Background="#FFD3CDCD">
+            <ListView.View>
+                <GridView>
+                    <GridView.Columns>
+                        <GridViewColumn Header="Код" Width="50" DisplayMemberBinding="{Binding Id}" />
+                        <GridViewColumn Header="Шифр клиента" Width="90" DisplayMemberBinding="{Binding Shifer}" />
+                        <GridViewColumn Header="ИНН клиента" Width="80" DisplayMemberBinding="{Binding Inn}"/>
+                        <GridViewColumn Header="Тип клиента" Width="75" DisplayMemberBinding="{Binding TypeStr}"/>
+                        <GridViewColumn Header="Дата регистрации клиента" Width="150" DisplayMemberBinding="{Binding Data, StringFormat={}{0:dd\.}{0:MM\.}{0:yyyy}}"/>
+                    </GridView.Columns>
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </StackPanel>
 </Window>

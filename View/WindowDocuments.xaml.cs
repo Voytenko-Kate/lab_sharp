@@ -24,6 +24,8 @@ namespace PodsystemaFizLicz.View
         public WindowDocuments()
         {
             InitializeComponent();
+            DocumentViewModel viewModel = new DocumentViewModel();
+            lvDocument.ItemsSource = viewModel.Documents;
         }
     }
 }
